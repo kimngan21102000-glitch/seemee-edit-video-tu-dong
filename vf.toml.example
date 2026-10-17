@@ -1,0 +1,12 @@
+# Chép file này thành vf.toml (scripts/setup-mac.sh hoặc scripts/setup-windows.ps1 tự tạo) rồi sửa đường dẫn tới
+# thư mục EDIT trong Google Drive (bật "Available offline" / "Có sẵn ngoại tuyến" cho thư mục EDIT).
+#
+# Mac (Google Drive for desktop):
+#   drive_root = "~/Library/CloudStorage/GoogleDrive-<email>/My Drive/EDIT"
+#   (Drive tiếng Việt có thể là ".../Drive của tôi/EDIT" — mở Finder xem đúng tên)
+# Windows: dùng dấu /  →  drive_root = "G:/My Drive/EDIT"
+#          hoặc nháy đơn →  drive_root = 'G:\My Drive\EDIT'
+drive_root = "~/Library/CloudStorage/GoogleDrive-<email>/My Drive/EDIT"
+
+# Hồ sơ sản phẩm mặc định khi brief của lô không ghi `profile:` (smilee | balo | …). Bỏ trống = bắt buộc ghi trong brief.
+# default_profile = "smilee"

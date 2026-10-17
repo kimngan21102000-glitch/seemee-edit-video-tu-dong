@@ -1,0 +1,9 @@
+{
+  "name": "edit-video-tu-dong",
+  "version": "1.0.0",
+  "description": "Edit video quảng cáo TikTok tự động theo hồ sơ sản phẩm (Smilee, balo, …): phân tích nguồn, viết kịch bản dựng nhiều biến thể, render 9:16 bằng ffmpeg + Remotion, QA, học từ điểm chấm. Chạy tốt trên MacBook Apple Silicon (VideoToolbox + mlx-whisper) và Windows (NVENC + CUDA).",
+  "author": {
+    "name": "mailhoang0720"
+  },
+  "keywords": ["video", "tiktok", "edit", "remotion", "ffmpeg", "quang-cao"]
+}

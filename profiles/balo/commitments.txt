@@ -1,0 +1,6 @@
+# Cam kết được highlight + hiệu ứng TỰ ĐỘNG khi người nói nói ra trong video (tìm trong transcript).
+# Mỗi dòng: cụm cần tìm | chữ hiển thị trên màn hình | phần được tô vệt highlight (bỏ trống = cả câu)
+# So khớp không phân biệt hoa thường, bỏ dấu cũng khớp; "5 - 7", "5 đến 7" coi như "5-7".
+# Chỉ ghi cam kết THẬT của sản phẩm (có trong product.md mục Cam kết). Ví dụ (bỏ dấu # để bật):
+# vừa laptop 15,6 | Vừa laptop 15,6″ | 15,6″
+# chống nước | Chống nước | chống nước

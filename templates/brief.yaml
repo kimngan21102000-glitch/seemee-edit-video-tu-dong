@@ -1,0 +1,20 @@
+# Brief cho một lô. `vf new <lô> --profile <slug>` tạo file này; hoặc chép thành jobs/<lô>/brief.yaml rồi điền.
+profile: null                # hồ sơ sản phẩm: smilee | balo | … (profiles/<slug>/) — BẮT BUỘC khi có nhiều hồ sơ
+platform: tiktok            # tiktok | reels | shorts
+aspect: "9:16"              # 9:16 | 1:1 | 16:9
+target_seconds: 60          # tổng thời lượng (±10%); ưu tiên 45–100 s tuỳ source, đủ ý
+cutdown_seconds: null       # bản cắt ngắn (giây, gợi ý 22) cho biến thể có "cutdown_of" trong edl; null = không làm
+variants: 4                 # số biến thể (1–20): mặc định 4 cấu trúc (library/style-guide.md mục 2)
+goal: awareness             # awareness (nhận diện) | education (giáo dục) | conversion (chuyển đổi)
+message: ""                 # thông điệp một câu (lấy từ profiles/<hồ sơ>/product.md)
+cta: "Bấm giỏ hàng"          # CTA một lệnh
+audience: ""
+source_roles:               # tên file trong "source gốc" → vai trò
+  "ten-nguon.mp4": a_roll
+must_keep: []               # câu/ý bắt buộc giữ (trích lời nói)
+must_cut: []                # câu/ý bắt buộc bỏ
+hook_ideas: []
+tone: "gần gũi, nói thật, không phóng đại"
+forbidden: []               # cụm cấm riêng cho lô này (render chặn chữ chứa các cụm ghi ở đây)
+style: default
+text_sources: []            # nguồn đã có chữ in sẵn trên hình → không thêm chữ lên đoạn của nguồn đó

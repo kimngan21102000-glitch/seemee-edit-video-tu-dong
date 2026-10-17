@@ -1,0 +1,2 @@
+# Cụm KHÔNG được nói/ghi trên màn hình (tham khảo khi viết chữ; render không tự chặn — muốn chặn cho một lô thì ghi
+# vào `forbidden` trong jobs/<lô>/brief.yaml). Mỗi dòng một cụm, dòng # là chú thích.
