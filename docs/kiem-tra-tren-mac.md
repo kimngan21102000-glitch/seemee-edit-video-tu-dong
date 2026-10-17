@@ -67,7 +67,7 @@ Dọn sau khi thử: xoá `jobs/smilee-lo-08` và `EDIT/out/smilee-lo-08` (khôn
 ## 6. Plugin
 Trong Claude Code (mở ở `~/edit-video-tu-dong`):
 ```
-/plugin marketplace add OWNER/edit-video-tu-dong
+/plugin marketplace add mnsd123/edit-video-tu-dong
 /plugin install edit-video-tu-dong@edit-video-tu-dong
 ```
 Đạt khi: gõ `/edit-video-tu-dong` thấy skill; hỏi "edit lô mới cho balo" → Claude chạy `vf doctor`, `vf profiles`, hỏi brief.

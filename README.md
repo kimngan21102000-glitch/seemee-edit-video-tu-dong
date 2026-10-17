@@ -54,7 +54,7 @@ Cần: Google Drive for desktop (bật *Available offline* cho thư mục `EDIT`
    (chọn GitHub.com → HTTPS → Login with a web browser; `gh auth setup-git` để git dùng luôn tài khoản này.)
 2. **Lấy code** vào thư mục làm việc:
    ```bash
-   gh repo clone OWNER/edit-video-tu-dong ~/edit-video-tu-dong
+   gh repo clone mnsd123/edit-video-tu-dong ~/edit-video-tu-dong
    ```
 3. **Cài môi trường** (Homebrew, ffmpeg, Python 3.11, Node, .venv, Remotion, model phiên âm ~3 GB, vf.toml):
    ```bash
@@ -64,7 +64,7 @@ Cần: Google Drive for desktop (bật *Available offline* cho thư mục `EDIT`
    cửa sổ Terminal). Cuối script chạy `vf doctor`.
 4. **Cài plugin Claude Code** (gõ trong Claude Code):
    ```
-   /plugin marketplace add OWNER/edit-video-tu-dong
+   /plugin marketplace add mnsd123/edit-video-tu-dong
    /plugin install edit-video-tu-dong@edit-video-tu-dong
    ```
 5. Mở Claude Code **ở thư mục repo** (`cd ~/edit-video-tu-dong && claude`) rồi gõ `/edit-video-tu-dong`.
@@ -75,7 +75,7 @@ Cập nhật: `git pull` trong `~/edit-video-tu-dong` (code + hồ sơ) và `/pl
 ## Cài trên Windows
 
 ```powershell
-git clone https://github.com/OWNER/edit-video-tu-dong C:\dev\edit-video-tu-dong
+git clone https://github.com/mnsd123/edit-video-tu-dong C:\dev\edit-video-tu-dong
 cd C:\dev\edit-video-tu-dong
 powershell -ExecutionPolicy Bypass -File scripts\setup-windows.ps1
 ```
