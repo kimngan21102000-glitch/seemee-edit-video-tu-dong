@@ -1,6 +1,6 @@
 ---
 name: edit-video-tu-dong
-description: Dùng khi người dùng muốn dựng video quảng cáo TikTok từ source gốc cho một sản phẩm (Smilee, balo, sản phẩm mới…) — "edit video tự động", "có source mới", "dựng video mới", "edit lô mới", "edit lô …", "làm video từ source", "thêm sản phẩm mới", hoặc gõ /edit-video-tu-dong. Phân tích nguồn, viết edl nhiều biến thể theo hồ sơ sản phẩm, render 9:16, QA, báo kết quả, sửa theo feedback.
+description: Dùng khi người dùng muốn dựng video quảng cáo TikTok từ source gốc cho một sản phẩm (SeeMee, sản phẩm mới…) — "edit video tự động", "có source mới", "dựng video mới", "edit lô mới", "edit lô …", "làm video từ source", "thêm sản phẩm mới", hoặc gõ /edit-video-tu-dong. Phân tích nguồn, viết edl nhiều biến thể theo hồ sơ sản phẩm, render 9:16, QA, báo kết quả, sửa theo feedback.
 ---
 
 # /edit-video-tu-dong — v1.0 (2026-10-16, từ /smilee-video v2.6)
@@ -34,8 +34,8 @@ Dòng `LỖI` → sửa theo gợi ý rồi chạy lại; `CẢNH BÁO` → báo
 Mã hoá tự chọn: VideoToolbox (Mac chip M) → NVENC (Windows GPU NVIDIA) → CPU. Phiên âm: mlx-whisper (Mac chip M) → faster-whisper.
 
 ### 1. Hồ sơ sản phẩm và có gì mới — `vf profiles`, `vf status`
-- Lô này của sản phẩm nào? Người dùng đã nói rõ (tên sản phẩm, "lô Smilee", "balo") → dùng hồ sơ đó. Chưa rõ mà có nhiều hồ sơ → **hỏi**: "Lô này cho sản phẩm nào? (1) smilee (2) balo (3) sản phẩm mới".
-- **Sản phẩm mới** → làm theo `profiles/_mau/README.md`: `cp -r profiles/_mau profiles/<slug>`, hỏi người dùng tài liệu sản phẩm (hoặc file trong Drive) để điền `product.md`, màu thương hiệu, cam kết; chọn gói đồ hoạ theo ngành. Hồ sơ còn là khung (như `balo`) → báo người dùng các mục `[CẦN ĐIỀN]` quan trọng, hỏi trước khi dựng.
+- Lô này của sản phẩm nào? Người dùng đã nói rõ (tên sản phẩm, "lô SeeMee") → dùng hồ sơ đó. Repo hiện chỉ có hồ sơ `seemee` → mặc định dùng; nếu sau này có nhiều hồ sơ mà chưa rõ → **hỏi**: "Lô này cho sản phẩm nào? (1) seemee (2) sản phẩm mới".
+- **Sản phẩm mới** → làm theo `profiles/_mau/README.md`: `cp -r profiles/_mau profiles/<slug>`, hỏi người dùng tài liệu sản phẩm (hoặc file trong Drive) để điền `product.md`, màu thương hiệu, cam kết; chọn gói đồ hoạ theo ngành. Hồ sơ còn là khung → báo người dùng các mục `[CẦN ĐIỀN]` quan trọng, hỏi trước khi dựng.
 - `vf status`: không có nguồn `MỚI` → hỏi dựng lại nguồn cũ hay chờ. Có lô đã chấm mà chưa học → chạy skill `video-learnings` TRƯỚC.
 
 ### 2. Lô và brief — `vf new auto --profile <slug>`
@@ -59,7 +59,7 @@ vf sheet "work/<nguồn>/normalized.mp4" --every 0.5
 - Nguồn là clip KOL dựng sẵn, nội dung khác brief → bám nội dung thật, báo người dùng. Không dùng đoạn có clip người sáng tạo khác chèn vào.
 
 ### 4. Viết `jobs/lo-NN/edl.json`
-Theo [edl-reference.md](edl-reference.md). Tóm tắt: mỗi biến thể đúng 1 `preset` của hồ sơ, khác nhau rõ về kiểu hook hoặc preset; mọi đoạn có `chapter`, đủ ý; hook ≤ 3 s, khung đầu mạnh nhất, chữ đầu ≤ 0,3 s; cảnh ≥ 1,2 s; CTA giữa video + `end_card` cuối; cam kết nổi bật; chỉ dùng đồ hoạ của gói hồ sơ đã bật; `rationale` 1–2 câu. Lô dài: viết script sinh edl neo theo giờ nguồn — mẫu `examples/smilee-lo-08/build_edl.py` (`edge_start`, `edge_end`, `dip`) + `slow_tails.py` (`video_end`).
+Theo [edl-reference.md](edl-reference.md). Tóm tắt: mỗi biến thể đúng 1 `preset` của hồ sơ, khác nhau rõ về kiểu hook hoặc preset; mọi đoạn có `chapter`, đủ ý; hook ≤ 3 s, khung đầu mạnh nhất, chữ đầu ≤ 0,3 s; cảnh ≥ 1,2 s; CTA giữa video + `end_card` cuối; cam kết nổi bật; chỉ dùng đồ hoạ của gói hồ sơ đã bật; `rationale` 1–2 câu. Lô dài: viết script sinh edl neo theo giờ nguồn — mẫu `build_edl.py` (`edge_start`, `edge_end`, `dip`) + `slow_tails.py` (`video_end`) của lô Smilee lo-08 — đã xoá khỏi cây, xem trong lịch sử git: `git show 6a95acb:examples/smilee-lo-08/build_edl.py` (và `…/slow_tails.py`).
 
 ### 5. Mép tiếng, render bản final
 ```

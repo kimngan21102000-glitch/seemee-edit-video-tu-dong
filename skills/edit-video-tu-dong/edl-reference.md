@@ -1,7 +1,6 @@
 # Viết `jobs/<lô>/edl.json` — tham chiếu
 
-Schema: `vf/edl.py` (docstring `Graphic` liệt kê mọi đồ hoạ), mẫu `templates/edl.example.json` và
-`examples/smilee-lo-08/`. Mọi thời gian `overlays`/`graphics`/`effects` theo **timeline output** (giây, 0 = đầu video).
+Schema: `vf/edl.py` (docstring `Graphic` liệt kê mọi đồ hoạ), mẫu `templates/edl.example.json` (lô Smilee lo-08 cũ: `git show 6a95acb:examples/smilee-lo-08/edl.json`). Mọi thời gian `overlays`/`graphics`/`effects` theo **timeline output** (giây, 0 = đầu video).
 Đọc đủ trước khi viết: brief, style guide chung + của hồ sơ, tokens của hồ sơ, `product.md`, hooks/learnings,
 `work/<nguồn>/transcript.json`, `keep.json`, `info.json`, `scenes.json` của MỌI nguồn, MỌI trang `*_sheet_NNN.png`.
 

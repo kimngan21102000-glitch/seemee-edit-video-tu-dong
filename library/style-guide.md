@@ -2,7 +2,7 @@
 
 Trạng thái: ĐÃ DUYỆT — tách từ style guide Smilee v2.6 (2026-10-16), chỉ giữ các luật **không phụ thuộc sản phẩm**.
 Mỗi luật có nguồn gốc là feedback thật của người dùng qua 8 lô Smilee (lo-01 … lo-08); bằng chứng chi tiết ở
-`profiles/smilee/learnings.md`.
+`profiles/smilee/learnings.md` (đã xoá khỏi repo SeeMee — xem `git show 6a95acb:profiles/smilee/learnings.md`).
 
 Đọc kèm (bắt buộc mỗi lô):
 - `profiles/<hồ sơ>/style-guide.md` — luật riêng sản phẩm (preset, đồ hoạ ngành, số luôn nhấn, điều cấm riêng). **Luật riêng thắng luật chung khi mâu thuẫn.**
@@ -56,7 +56,8 @@ Mỗi luật có nguồn gốc là feedback thật của người dùng qua 8 l�
 - Nói hết câu mà đoạn sau là cảnh khác → **`video_end`** trên đoạn: tiếng chạy tới hết chữ, hình dừng ở điểm chuyển cảnh, **khúc cuối làm chậm 0,2–1 s**.
 - Đầu mỗi lô: phiên âm lại 1 đoạn ngắn + đo trũng âm lượng để biết nguồn lệch bao nhiêu (có nguồn lệch đều +0,3 s cả file → cộng OFF cho mọi mốc).
 - Sau render: **phiên âm lại output**, soát mọi chỗ nối không mất/thừa chữ. Lint `cắt giữa từ` / `dính tiếng` là lỗi thật, không bỏ qua.
-- Mẫu code: `examples/smilee-lo-08/build_edl.py` (`edge_start`, `edge_end`, `dip`) + `slow_tails.py`.
+- Mẫu code: `build_edl.py` (`edge_start`, `edge_end`, `dip`) + `slow_tails.py` của lô Smilee lo-08 — trong lịch sử git:
+  `git show 6a95acb:examples/smilee-lo-08/build_edl.py`.
 
 ## 4. Typography
 

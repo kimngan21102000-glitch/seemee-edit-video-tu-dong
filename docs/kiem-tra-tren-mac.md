@@ -1,11 +1,11 @@
 # Tự kiểm tra trên MacBook (Apple Silicon)
 
-Bản này đã kiểm trên Windows (pytest, render thử Smilee bằng hồ sơ mới, cài plugin). Riêng **VideoToolbox** và
+Bản này đã kiểm trên Windows (pytest, render thử bằng hồ sơ, cài plugin). Riêng **VideoToolbox** và
 **mlx-whisper** chỉ chạy được trên Mac — làm lần lượt các bước sau ở máy Mac, mỗi bước có "đạt khi".
 
 ## 1. Cài đặt
 ```bash
-cd ~/edit-video-tu-dong && bash scripts/setup-mac.sh
+cd ~/seemee-edit-video-tu-dong && bash scripts/setup-mac.sh
 ```
 Đạt khi: script chạy hết 6 bước, dòng 2 in `ffmpeg có h264_videotoolbox`, bước 6 tải xong model
 `mlx-community/whisper-large-v3-mlx`.
@@ -20,7 +20,7 @@ cd ~/edit-video-tu-dong && bash scripts/setup-mac.sh
 - `OK        phiên âm: mlx-whisper (chip Apple)` và `model phiên âm … đã tải`
 - `OK        Remotion đã cài — chữ động`
 - `OK        …/source gốc: N video` (Drive đọc được)
-- `OK        hồ sơ sản phẩm: balo, smilee …`
+- `OK        hồ sơ sản phẩm: seemee …`
 
 Không đạt → xem cột "Lỗi thường gặp" trong `skills/edit-video-tu-dong/SKILL.md`.
 
@@ -42,35 +42,34 @@ ffmpeg -v error -f lavfi -i testsrc2=s=1080x1920:d=3 -c:v h264_videotoolbox -q:v
 ```
 Đạt khi: in `VT-OK` và `mlx`.
 
-## 5. Render thử 1 bản Smilee
-Chép lô mẫu và chạy (cần `dqamii.mp4` trong `EDIT/source gốc/`):
+## 5. Render thử SeeMee
+Render thử đồ hoạ SeeMee (preset `brand`, thẻ tím dâu) + một lô mẫu tổng hợp qua `vf analyze`/`vf render` bằng VideoToolbox:
 ```bash
-mkdir -p jobs/smilee-lo-08 && cp examples/smilee-lo-08/* jobs/smilee-lo-08/
+.venv/bin/python -m pytest -q tests/test_profile.py::test_seemee_graphics_render tests/test_cli.py::test_analyze_then_render
+```
+Phân tích thử một source SeeMee thật (cần ít nhất 1 video trong `EDIT/source gốc/`):
+```bash
+.venv/bin/vf new auto --profile seemee
 ```
 ```bash
-.venv/bin/vf analyze smilee-lo-08
+.venv/bin/vf analyze lo-01
 ```
-```bash
-.venv/bin/vf render smilee-lo-08 --only lo-08_routine_gel-nhanh
-```
+(thay `lo-01` bằng tên lô mà lệnh `vf new auto` in ra.)
 Đạt khi:
-- `analyze` in `Phiên âm bằng mlx-whisper (Apple Silicon)`, xong trong vài phút (nhanh hơn nhiều so với CPU).
-- `render` in `OK lo-08_routine_gel-nhanh (…)`, không có dòng `vùng an toàn: …`; file
-  `EDIT/out/smilee-lo-08/lo-08_routine_gel-nhanh.mp4` ~80 s, mở xem: chữ/thẻ đúng màu tím mận/hồng, tiếng không bị
-  cắt lấn chữ, thẻ đèn "kính tối".
-- Mở `…_sheet.png` cạnh bản Windows (`EDIT/out/lo-08/`): bố cục giống nhau.
-- Lưu ý: phiên âm mlx có thể lệch vài chục ms so với faster-whisper → các mốc trong `edl.json` mẫu (tính từ phiên âm
-  Windows) vẫn dùng được; lô mới thì edl viết theo phiên âm của chính máy Mac.
+- pytest báo `2 passed`.
+- `analyze` in `Phiên âm bằng mlx-whisper (Apple Silicon)`, xong trong vài phút (nhanh hơn nhiều so với CPU);
+  có `work/<nguồn>/transcript.json` và các trang `*_sheet_NNN.png`.
+- Phiên âm mlx có thể lệch vài chục ms so với faster-whisper → edl của lô viết theo phiên âm của chính máy Mac.
 
-Dọn sau khi thử: xoá `jobs/smilee-lo-08` và `EDIT/out/smilee-lo-08` (không xoá gì trong `source gốc`).
+Dọn sau khi thử: xoá `jobs/<lô thử>` nếu không dùng tiếp (không xoá gì trong `source gốc`).
 
 ## 6. Plugin
-Trong Claude Code (mở ở `~/edit-video-tu-dong`):
+Trong Claude Code (mở ở `~/seemee-edit-video-tu-dong`):
 ```
-/plugin marketplace add mnsd123/edit-video-tu-dong
-/plugin install edit-video-tu-dong@edit-video-tu-dong
+/plugin marketplace add kimngan21102000-glitch/seemee-edit-video-tu-dong
+/plugin install edit-video-tu-dong@seemee-edit-video-tu-dong
 ```
-Đạt khi: gõ `/edit-video-tu-dong` thấy skill; hỏi "edit lô mới cho balo" → Claude chạy `vf doctor`, `vf profiles`, hỏi brief.
+Đạt khi: gõ `/edit-video-tu-dong` thấy skill; hỏi "edit lô mới cho SeeMee" → Claude chạy `vf doctor`, `vf profiles`, hỏi brief.
 
 ## 7. Báo lại
 Gửi Claude: kết quả `vf doctor`, số test qua/hỏng, thời gian `analyze` + `render` một bản. Bước nào hỏng, dán nguyên
