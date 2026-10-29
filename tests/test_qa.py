@@ -93,15 +93,20 @@ PENDING = [l for l in (ROOT / "profiles/seemee/claims_pending.txt").read_text(en
            if l and not l.startswith("#")]
 
 
-@pytest.mark.parametrize("text", ["4,8 sao trên TikTok", "đạt 4.8 sao", "4 chấm 8 sao", "bốn chấm tám sao",
-                                  "hơn trăm  nghìn lượt bán", "giữ nếp cả tuần luôn"])
+@pytest.mark.parametrize("text", ["giữ nếp cả tuần luôn", "giữ  nếp nhiều ngày"])
 def test_pending_claim_spoken_forms_caught(text):
     assert check_claims([text], PENDING + FORBIDDEN) != []
 
 
+@pytest.mark.parametrize("text", ["4,8 sao trên TikTok", "bốn chấm tám sao", "131.6K đã bán", "giữ nếp đến 24H"])
+def test_confirmed_social_proof_not_blocked(text):
+    # 2026-10-29 người dùng chốt: số sao, lượt bán, giữ nếp 24H được nói/ghi thẳng
+    assert check_claims([text], PENDING + FORBIDDEN) == []
+
+
 def test_listing_commitments_not_blocked():
     # cam kết có trên listing (commitments.txt) được highlight, không bị chặn
-    for text in ["chống bỏng dày gấp 2 lần", "tăng 85% độ bóng mượt", "bảo hành 12 tháng", "4 mức nhiệt 140 đến 200 độ"]:
+    for text in ["chống bỏng dày gấp 2 lần", "+85% độ bóng mượt", "bảo hành 12 tháng", "4 mức nhiệt 140 đến 200 độ"]:
         assert check_claims([text], PENDING + FORBIDDEN) == []
 
 

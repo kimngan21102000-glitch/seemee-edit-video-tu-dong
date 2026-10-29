@@ -51,7 +51,7 @@ def test_seemee_profile_no_nha_khoa_pack():
     assert {"versus", "steps", "cost_compare", "end_card"} <= kinds
     assert not kinds & {"teeth", "whiten", "shade", "light", "light_timer", "size_fit", "badge"}
     shown = {c.display for c in load_commitments()}
-    assert {"Bảo hành 12 tháng", "Chống bỏng", "4 mức nhiệt", "Bóng mượt hơn 85%"} <= shown
+    assert {"Bảo hành 12 tháng", "Chống bỏng", "4 mức nhiệt", "+85% độ bóng mượt"} <= shown
 
 
 def test_check_profile_rejects_pack_not_enabled():

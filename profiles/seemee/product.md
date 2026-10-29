@@ -1,7 +1,7 @@
 # SEEMEE PREMIUM 2026 — MÁY UỐN TÓC XOĂN LƠI TỰ ĐỘNG — HỒ SƠ SẢN PHẨM
 
 > Nguồn: listing TikTok Shop SeeMee, product ID 1730842847185046483
-> (https://www.tiktok.com/view/product/1730842847185046483), lấy ngày 2026-10-29. Mục chưa chắc ghi [CẦN XÁC NHẬN].
+> (https://www.tiktok.com/view/product/1730842847185046483), lấy ngày 2026-10-29; các mục đã được người dùng xác nhận 2026-10-29. Mục chưa chắc ghi [CẦN XÁC NHẬN].
 
 ## 1. Thông tin cơ bản
 | Hạng mục | Nội dung |
@@ -13,11 +13,11 @@
 | Dạng sản phẩm | Máy uốn tóc tự động, trục xoay 2 chiều, trục 32 mm (xoăn lơi) |
 | Phiên bản | PREMIUM 2026 (siêu cải tiến — bản đang đẩy) · DREAMY 2025 (bản trước) |
 | Màu | Hồng (biến thể được mua nhiều nhất trong đánh giá) |
-| Giá niêm yết | 380.000₫ (giá gốc 800.000₫, −53%), Freeship. Giá theo listing/đợt sale thay đổi (350.000–380.000₫) → [CẦN XÁC NHẬN giá của lô trước khi ghi lên màn hình] |
+| Giá | **Giá gốc 900K**; giá bán chỉ nói/ghi **"4xx"** (không ghi số cụ thể — giá thực tế đổi theo đợt sale). Freeship. (người dùng chốt 2026-10-29) |
 | Trong hộp | 1 máy uốn tóc, 2 kẹp tóc hồng, 1 lược hồng, 1 hướng dẫn sử dụng |
 | Bảo hành | 12 tháng, lỗi nhà sản xuất, bảo hành tại nhà |
 | Kênh bán chính | TikTok Shop |
-| Tệp khách chính | Nữ trẻ thích tóc xoăn lơi, tự làm tóc ở nhà, vụng tay / sợ bỏng / không có thời gian ra tiệm [CẦN XÁC NHẬN chân dung chi tiết] |
+| Tệp khách chính | Khách 25–34 tuổi, muốn có kết quả uốn tóc đẹp nhưng dễ làm (người dùng chốt 2026-10-29) |
 
 ### Thông số kỹ thuật (dung sai ±10%)
 | Thông số | Giá trị |
@@ -34,9 +34,10 @@
 - Uốn nhanh, tóc vào nếp nhanh — không phải đứng đợi lâu; tự làm tóc xoăn lơi ở nhà như ra tiệm.
 - Máy tự cuốn tóc (trục xoay 2 chiều) → không cần khéo tay, không phải tự quấn.
 - Chống bỏng: hàng rào chống bỏng dày gấp 2 lần → không lo chạm nóng tay, cổ, tai.
-- Tóc bóng mượt hơn: trục phủ tinh dầu cao cấp → tăng 85% độ bóng mượt (theo nhãn hàng).
+- Tóc bóng mượt hơn: trục phủ tinh dầu cao cấp → **+85% độ bóng mượt**.
 - Uốn được nhiều tóc mỗi lần, nhanh hơn: thẻ cài tóc to và rộng gấp 1,5 lần.
-- Chọn nhiệt theo tóc (4 mức 140–200°C), hẹn giờ 10 giây báo đủ nhiệt cho mỗi lọn.
+- **Mức nhiệt đa dạng phù hợp cho mọi chất tóc, loại tóc** (4 mức 140–200°C); hẹn giờ 10 giây báo đủ nhiệt cho mỗi lọn.
+- **Giữ nếp lên đến 24H**.
 - Dây dài 170 cm xoay 360° — đứng xa ổ điện, không rối dây.
 - Máy to, chắc tay, màu hồng xinh, có sẵn kẹp + lược trong hộp.
 - Bảo hành 12 tháng tại nhà.
@@ -48,7 +49,9 @@
 - 4 mức nhiệt 140–200°C.
 - Hẹn giờ 10 giây.
 - Chống bỏng (hàng rào chống bỏng dày gấp 2 lần).
-- Tăng 85% độ bóng mượt (con số nhãn hàng công bố trên listing — chỉ đọc đúng con số này, không làm tròn/thổi phồng) [CẦN XÁC NHẬN tài liệu đo của nhãn hàng].
+- +85% độ bóng mượt (nói thẳng, đúng con số này).
+- Giữ nếp lên đến 24H.
+- 4.8 sao, 131.6K đã bán (ghi thẳng lên màn hình được, không cần ghi ngày).
 - Thẻ cài tóc to/rộng gấp 1,5 lần.
 
 ## 3. Nỗi đau khách hàng (nguyên liệu cho hook)
@@ -57,7 +60,7 @@
 - Uốn lâu, mỏi tay — mỗi sáng mất cả chục phút mà tóc vẫn chưa vào nếp.
 - Ra tiệm làm tóc tốn tiền, tốn thời gian; uốn hoá chất sợ hư tóc.
 - Tóc khô xơ sau khi dùng nhiệt.
-- Máy tự động rẻ thì kẹt tóc, giật tóc, ít tóc mỗi lần [CẦN XÁC NHẬN — chỉ nói chung "máy cũ", không nêu tên hãng].
+- Máy uốn tự động rẻ tiền/dỏm gây **kẹt tóc, giật tóc, cháy nổ, khô xơ tóc** (nói chung "máy rẻ tiền/dỏm", không nêu tên hãng).
 
 ## 4. Điểm khác biệt so với lựa chọn khác
 - So với bản DREAMY 2025: PREMIUM 2026 có 3 nâng cấp độc quyền — phủ tinh dầu (+85% bóng mượt), hàng rào chống bỏng dày gấp 2, thẻ cài tóc rộng gấp 1,5.
@@ -68,7 +71,7 @@
 ## 5. Bằng chứng (ảnh/clip trước-sau, số liệu có nguồn)
 - Đánh giá 4.8/5 — 1.548 đánh giá (5★: 1338 · 4★: 168 · 3★: 19 · 2★: 6 · 1★: 17), listing chính, 2026-10-29.
 - Đã bán 131.6K (listing chính, 2026-10-29). Các listing SeeMee khác trên shop: 62.296 / 43.776 / 15.526 / 12.985 / 8.399 đã bán.
-- Số liệu đánh giá/lượt bán thay đổi theo ngày → nằm trong `claims_pending.txt`; chỉ đưa lên màn hình khi có ảnh chụp màn hình có ngày [CẦN XÁC NHẬN].
+- Được ghi thẳng lên màn hình: **4.8 sao, 131.6K đã bán** (người dùng chốt 2026-10-29, không cần ghi ngày).
 - Review nổi bật: "uốn nhanh, không phải đợi lâu", "máy to, chắc chắn", "màu hồng đẹp", "lọn xoăn đẹp".
 - Clip trước/sau thật: tóc thẳng → xoăn lơi từ source KOL (ưu tiên cảnh soi gương, hất tóc).
 
@@ -76,13 +79,13 @@
 (Danh sách tham khảo: `forbidden.txt`.)
 - Không hứa "không bao giờ bỏng", "100% không hư tóc", "phục hồi/chữa tóc hư tổn" — chỉ nói "chống bỏng", "bóng mượt hơn".
 - Không đổi con số: 85% bóng mượt, gấp 2 lần chống bỏng, gấp 1,5 lần thẻ cài, 65 vòng/phút, 140–200°C, 12 tháng.
-- Không nói "giữ nếp cả tuần/vĩnh viễn" [CẦN XÁC NHẬN thời gian giữ nếp thực tế].
+- Giữ nếp: chỉ nói "lên đến 24H" — không nói "cả tuần", "vĩnh viễn".
 - Không nêu tên/chê đối thủ (ANN, PRO EXTRA, AKIO…), không nêu tên tiệm tóc.
-- Không bịa thông số không có trên listing (ion âm, chất liệu trục cụ thể…) [CẦN XÁC NHẬN nếu KOL nói].
-- Không ghi giá cố định khi không chắc đợt sale của lô.
+- Không tự thêm thông số không có trên listing (ion âm, chất liệu trục cụ thể…). KOL nói gì thì chữ trên màn hình **trích nguyên văn** lời KOL, không diễn giải thêm.
+- Không ghi giá bán cụ thể (380K, 350K…) — chỉ "4xx"; giá gốc ghi 900K.
 
 ## 7. Cách dùng (để mô tả chính xác trong video)
-1. Cắm điện, bật máy, chọn mức nhiệt (tóc mảnh/yếu: mức thấp; tóc dày/khó vào nếp: mức cao) [CẦN XÁC NHẬN bảng mức nhiệt theo loại tóc trong HDSD].
+1. Cắm điện, bật máy, chọn mức nhiệt — nói: "mức nhiệt đa dạng phù hợp cho mọi chất tóc, loại tóc" (không nêu mức nào cho tóc nào).
 2. Chải tóc khô, chia lọn bằng kẹp hồng đi kèm.
 3. Đưa lọn tóc vào khe, bấm nút — trục tự cuốn tóc (chọn chiều xoay trái/phải theo bên tóc).
 4. Giữ đến khi máy báo hẹn giờ 10 giây, thả máy ra để lọn xoăn tuột ra.

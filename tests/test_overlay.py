@@ -23,7 +23,8 @@ def _w(text, start, end):
 
 def test_commitments_file_has_listing_claims():
     displays = {c.display for c in load_commitments()}
-    assert {"Bảo hành 12 tháng", "Chống bỏng", "4 mức nhiệt", "140–200°C", "Bóng mượt hơn 85%"} <= displays
+    assert {"Bảo hành 12 tháng", "Chống bỏng", "4 mức nhiệt", "140–200°C", "+85% độ bóng mượt", "Giữ nếp đến 24H",
+            "4.8 sao", "131.6K đã bán"} <= displays
 
 
 def test_find_spoken_range_commitment():

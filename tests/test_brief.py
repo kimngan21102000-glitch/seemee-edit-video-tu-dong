@@ -59,7 +59,7 @@ def test_duplicates_removed(tmp_path):
 
 def test_pending_claims_merged(tmp_path):
     b = load_brief(_write_brief(tmp_path), FORBIDDEN, PENDING)
-    assert "4.8 sao" in b.forbidden
+    assert "giữ nếp nhiều ngày" in b.forbidden
 
 
 def test_forbidden_txt_has_product_rules():
@@ -71,5 +71,5 @@ def test_forbidden_txt_has_product_rules():
 
 def test_product_md_keeps_confirm_markers():
     text = (ROOT / "profiles" / "seemee" / "product.md").read_text(encoding="utf-8")
-    assert text.count("[CẦN XÁC NHẬN") >= 5
     assert "Những điều KHÔNG được nói" in text
+    assert "Giá gốc 900K" in text and "4xx" in text and "24H" in text

@@ -11,13 +11,16 @@ Thông tin sản phẩm: `product.md`; cam kết tự highlight: `commitments.tx
   **chống bỏng dày gấp 2** → **thẻ cài tóc rộng gấp 1,5 (uốn nhiều tóc, nhanh hơn)** → **phủ tinh dầu, +85% bóng mượt**.
 - Biến thể 3 mặc định ("hook giá trị"): **bảo hành 12 tháng tại nhà** / quà trong hộp (kẹp + lược hồng) / giá sale so giá gốc
   → hiệu quả nhanh (lọn bung sau 10 giây).
-- Gỡ nỗi lo trước khi nói tiền: bỏng (hàng rào chống bỏng), hư tóc (chọn mức nhiệt 140–200°C, phủ tinh dầu), vụng tay (máy tự cuốn).
+- Tệp 25–34 tuổi, muốn tóc uốn đẹp mà dễ làm → nhấn "dễ": máy tự cuốn, 10 giây một lọn.
+- Nỗi đau mở đầu: máy uốn tự động rẻ tiền/dỏm → kẹt tóc, giật tóc, cháy nổ, khô xơ tóc (không nêu tên hãng).
+- Gỡ nỗi lo trước khi nói tiền: bỏng (hàng rào chống bỏng), hư tóc (mức nhiệt cho mọi chất tóc, phủ tinh dầu +85% bóng mượt), vụng tay (máy tự cuốn).
 - Chương `speed` = 10 giây/lọn, trục 65 vòng/phút; `saving` = tự làm ở nhà thay ra tiệm, bảo hành 12 tháng;
   `extra` = dây 170 cm xoay 360°, kẹp + lược trong hộp.
-- Số luôn được nhấn: **10 GIÂY**, **GẤP 2** (chống bỏng), **GẤP 1,5** (thẻ cài), **+85%** (bóng mượt), **4 MỨC NHIỆT**, **12 THÁNG**, **32MM**.
+- Số luôn được nhấn: **10 GIÂY**, **GẤP 2** (chống bỏng), **GẤP 1,5** (thẻ cài), **+85%** (bóng mượt), **24H** (giữ nếp),
+  **4 MỨC NHIỆT** ("phù hợp cho mọi chất tóc, loại tóc"), **12 THÁNG**, **32MM**, **4.8 SAO · 131.6K ĐÃ BÁN**, **900K → 4XX**.
 - Không bao giờ: chỉnh màu/độ xoăn của tóc thật trong footage, đổi con số của nhãn hàng, nêu tên đối thủ (ANN, PRO EXTRA, AKIO…)
-  hay tiệm tóc, hứa "không bao giờ bỏng"/"không hư tóc" (xem `forbidden.txt`). Số đánh giá/lượt bán chỉ ghi khi có ảnh
-  chụp có ngày (`claims_pending.txt`). Giá chỉ ghi khi brief của lô xác nhận đợt sale.
+  hay tiệm tóc, hứa "không bao giờ bỏng"/"không hư tóc" (xem `forbidden.txt`). Giá: giá gốc **900K**, giá bán chỉ ghi **"4xx"**
+  (không ghi số cụ thể). KOL nói thông số/ý gì ngoài listing → chữ trên màn hình trích nguyên văn, không diễn giải.
 
 ## 2. Preset
 | Preset | Khi dùng | Chữ |

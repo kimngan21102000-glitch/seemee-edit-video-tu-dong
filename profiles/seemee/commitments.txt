@@ -6,7 +6,7 @@ bảo hành 12 tháng | Bảo hành 12 tháng | 12 tháng
 bảo hành 1 năm | Bảo hành 12 tháng | 12 tháng
 chống bỏng | Chống bỏng | chống bỏng
 dày gấp 2 | Chống bỏng dày gấp 2 | gấp 2
-85% | Bóng mượt hơn 85% | 85%
+85% | +85% độ bóng mượt | +85%
 gấp 1.5 | Thẻ cài tóc rộng gấp 1,5 | gấp 1,5
 4 mức nhiệt | 4 mức nhiệt | 4 mức nhiệt
 140-200 độ | 140–200°C | 140–200°C
@@ -15,3 +15,11 @@ gấp 1.5 | Thẻ cài tóc rộng gấp 1,5 | gấp 1,5
 32mm | Trục 32mm | 32mm
 32 mm | Trục 32mm | 32mm
 10 giây | Hẹn giờ 10 giây | 10 giây
+24h | Giữ nếp đến 24H | 24H
+24 giờ | Giữ nếp đến 24H | 24H
+24 tiếng | Giữ nếp đến 24H | 24H
+4.8 sao | 4.8 sao | 4.8 sao
+131.6k | 131.6K đã bán | 131.6K
+131.6 nghìn | 131.6K đã bán | 131.6K
+131.6 ngàn | 131.6K đã bán | 131.6K
+mọi chất tóc | Hợp mọi chất tóc | mọi chất tóc
