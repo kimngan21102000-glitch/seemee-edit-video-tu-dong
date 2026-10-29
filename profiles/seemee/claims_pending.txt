@@ -1,0 +1,8 @@
+# Claim CHƯA có bằng chứng lưu kèm (product.md mục 5). Ghi vào `forbidden` của lô khi cần chặn.
+# Khi đã lưu bằng chứng (ảnh chụp màn hình có ngày, xác nhận nhãn hàng) thì xoá dòng tương ứng.
+# Dòng bắt đầu bằng # là chú thích. Khi so khớp, "4,8"/"bốn chấm tám" coi như "4.8".
+4.8 sao
+trăm nghìn lượt bán
+trăm ngàn lượt bán
+131 nghìn
+giữ nếp cả tuần

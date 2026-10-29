@@ -21,37 +21,37 @@ def _w(text, start, end):
     return Word(text, start, end)
 
 
-def test_commitments_file_has_three_result_claims():
+def test_commitments_file_has_listing_claims():
     displays = {c.display for c in load_commitments()}
-    assert {"Trắng sau 5–7 ngày", "Bật 3–4 tone", "Trắng như sứ"} <= displays
+    assert {"Bảo hành 12 tháng", "Chống bỏng", "4 mức nhiệt", "140–200°C", "Bóng mượt hơn 85%"} <= displays
 
 
 def test_find_spoken_range_commitment():
-    words = [_w("dùng", 0.0, 0.3), _w("năm", 1.0, 1.2), _w("đến", 1.2, 1.4), _w("bảy", 1.4, 1.6),
-             _w("ngày", 1.6, 1.9), _w("là", 2.0, 2.1), _w("trắng", 2.1, 2.4)]
+    words = [_w("chỉnh", 0.0, 0.3), _w("140", 1.0, 1.2), _w("đến", 1.2, 1.4), _w("200", 1.4, 1.6),
+             _w("độ", 1.6, 1.9), _w("là", 2.0, 2.1), _w("xoăn", 2.1, 2.4)]
     found = find_commitments(words, load_commitments(), total=10.0)
     assert len(found) == 1
     o = found[0]
-    assert o.text == "Trắng sau 5–7 ngày" and o.style == "commit" and o.animation == "highlight"
-    assert o.emphasis == ["5–7 ngày"]
+    assert o.text == "140–200°C" and o.style == "commit" and o.animation == "highlight"
+    assert o.emphasis == ["140–200°C"]
     assert o.start == pytest.approx(0.9) and o.end >= 1.9 + 1.0
 
 
-def test_find_three_commitments_and_none_in_plain_talk():
+def test_find_two_commitments_and_none_in_plain_talk():
     words = [_w(t, i * 0.4, i * 0.4 + 0.35) for i, t in enumerate(
-        "răng bật 3-4 tông trắng như răng sứ luôn".split())]
+        "máy chống bỏng mà còn bảo hành 12 tháng luôn".split())]
     texts = sorted(o.text for o in find_commitments(words, load_commitments(), total=20.0))
-    assert texts == ["Bật 3–4 tone", "Trắng như sứ"]
-    plain = [_w(t, i * 0.4, i * 0.4 + 0.3) for i, t in enumerate("mỗi lần 15 phút tại nhà".split())]
+    assert texts == ["Bảo hành 12 tháng", "Chống bỏng"]
+    plain = [_w(t, i * 0.4, i * 0.4 + 0.3) for i, t in enumerate("mỗi sáng uốn tóc tại nhà".split())]
     assert find_commitments(plain, load_commitments(), total=5.0) == []
 
 
 def test_plan_overlays_skips_commitment_already_covered():
     v = Variant(id="x", hook_type="pain", hook={"source": "a", "start": 0, "end": 2}, segments=[], rationale="r",
-                overlays=[{"text": "Trắng như sứ", "start": 0.2, "end": 1.5, "style": "commit"}])
-    words = {"a": [_w("như", 0.5, 0.7), _w("sứ", 0.7, 1.0)]}
+                overlays=[{"text": "Chống bỏng", "start": 0.2, "end": 1.5, "style": "commit"}])
+    words = {"a": [_w("chống", 0.5, 0.7), _w("bỏng", 0.7, 1.0)]}
     planned = plan_overlays(v, words)
-    assert [o.text for o in planned] == ["Trắng như sứ"]
+    assert [o.text for o in planned] == ["Chống bỏng"]
 
 
 def test_captions_off_by_default():
@@ -73,8 +73,8 @@ def test_ffmpeg_cmd_with_motion_overlay(sample_video, tmp_path):
 def test_render_overlay_has_alpha_and_duration(tmp_path):
     v = Variant(id="ov", hook_type="pain", hook={"source": "a", "start": 0, "end": 2.0},
                 segments=[{"source": "a", "start": 3, "end": 4.5}], rationale="r",
-                overlays=[{"text": "Cười mà phải che miệng?", "start": 0, "end": 1.5, "animation": "word_by_word"},
-                          {"text": "Trắng sau 5–7 ngày", "start": 2.0, "end": 3.4, "style": "commit",
+                overlays=[{"text": "Uốn tóc toàn bị bỏng tay?", "start": 0, "end": 1.5, "animation": "word_by_word"},
+                          {"text": "Bảo hành 12 tháng", "start": 2.0, "end": 3.4, "style": "commit",
                            "animation": "highlight"}])
     out = render_overlay(v, ROOT / "library/style-guide.md", tmp_path / "ov.mov", overlays=v.overlays)
     s = json.loads(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_streams",
@@ -88,23 +88,23 @@ def test_render_overlay_has_alpha_and_duration(tmp_path):
 def test_render_variant_with_motion(sample_video, tmp_path):
     v = Variant(id="m", hook_type="result_first", hook={"source": "a.mp4", "start": 1.0, "end": 2.5},
                 segments=[{"source": "a.mp4", "start": 4.0, "end": 4.9}], rationale="r",
-                overlays=[{"text": "15 phút tại nhà", "start": 0.0, "end": 1.4, "animation": "pop"}])
-    words = {"a.mp4": [_w("trắng", 1.2, 1.5), _w("như", 1.5, 1.7), _w("sứ", 1.7, 2.0)]}
+                overlays=[{"text": "10 giây một lọn", "start": 0.0, "end": 1.4, "animation": "pop"}])
+    words = {"a.mp4": [_w("máy", 1.2, 1.5), _w("chống", 1.5, 1.7), _w("bỏng", 1.7, 2.0)]}
     out = render_variant({"a.mp4": sample_video}, {"a.mp4": probe(sample_video)}, v, tmp_path / "m.mp4",
                          words_by_source=words, brand=BRAND, work_dir=tmp_path / "w", motion=True)
     info = probe(out)
     assert (info.width, info.height) == (1080, 1920)
     assert abs(info.duration - output_duration(v)) <= 0.15
     props = json.loads((tmp_path / "w" / "m_overlay.json").read_text(encoding="utf-8"))
-    assert any(o["text"] == "Trắng như sứ" for o in props["overlays"])
+    assert any(o["text"] == "Chống bỏng" for o in props["overlays"])
 
 
 def test_overlays_same_position_do_not_overlap():
     v = Variant(id="x", hook_type="pain", hook={"source": "a", "start": 0, "end": 2},
                 segments=[{"source": "a", "start": 2, "end": 9}], rationale="r")
-    words = {"a": [_w("năm", 5.0, 5.2), _w("đến", 5.2, 5.4), _w("bảy", 5.4, 5.6), _w("ngày", 5.6, 5.9),
-                   _w("trắng", 6.0, 6.3), _w("như", 6.3, 6.5), _w("sứ", 6.5, 6.9)]}
+    words = {"a": [_w("bảo", 5.0, 5.2), _w("hành", 5.2, 5.4), _w("12", 5.4, 5.6), _w("tháng", 5.6, 5.9),
+                   _w("chống", 6.0, 6.3), _w("bỏng", 6.3, 6.9)]}
     planned = [o for o in plan_overlays(v, words) if o.position == "center"]
-    assert [o.text for o in planned] == ["Trắng sau 5–7 ngày", "Trắng như sứ"]
+    assert [o.text for o in planned] == ["Bảo hành 12 tháng", "Chống bỏng"]
     for a, b in zip(planned, planned[1:]):
         assert a.end <= b.start + 1e-6, (a, b)

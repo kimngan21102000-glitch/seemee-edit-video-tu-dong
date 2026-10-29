@@ -51,7 +51,7 @@ def test_analyze_then_render(project):
     assert len(rows) == 3
     assert list(rows[0])[:7] == ["variant", "hook_type", "preset", "length_s", "hook_text", "score", "notes"]
     assert "ctr" in rows[0] and rows[0]["preset"]
-    assert rows[0]["hook_text"] == "Cười mà phải che miệng?"
+    assert rows[0]["hook_text"] == "Uốn tóc toàn bị bỏng tay?"
 
 
 def test_render_keeps_existing_scores(project):
@@ -77,7 +77,7 @@ def test_library_forbidden_no_longer_blocks(project):
     """forbidden.txt không còn chặn (người dùng chốt 2026-10-14)."""
     edl_path = project["job"] / "edl.json"
     edl = json.loads(edl_path.read_text(encoding="utf-8"))
-    edl["variants"][1]["overlays"][0]["text"] = "Trắng thần kỳ"
+    edl["variants"][1]["overlays"][0]["text"] = "Xoăn thần kỳ"
     edl_path.write_text(json.dumps(edl, ensure_ascii=False), encoding="utf-8")
     _invoke("analyze", project, "--no-transcribe")
     r = _invoke("render", project, "--only", "v2-cau-hoi")
@@ -88,17 +88,17 @@ def test_library_forbidden_no_longer_blocks(project):
 def test_brief_forbidden_still_blocks(project):
     """Cụm cấm do chính brief của lô ghi thì vẫn chặn biến thể đó."""
     brief = project["job"] / "brief.yaml"
-    brief.write_text(brief.read_text(encoding="utf-8").replace("forbidden: []", "forbidden: [siêu trắng]"),
+    brief.write_text(brief.read_text(encoding="utf-8").replace("forbidden: []", "forbidden: [siêu xoăn]"),
                      encoding="utf-8")
     edl_path = project["job"] / "edl.json"
     edl = json.loads(edl_path.read_text(encoding="utf-8"))
-    edl["variants"][1]["overlays"][0]["text"] = "Răng siêu trắng"
+    edl["variants"][1]["overlays"][0]["text"] = "Tóc siêu xoăn"
     edl_path.write_text(json.dumps(edl, ensure_ascii=False), encoding="utf-8")
     _invoke("analyze", project, "--no-transcribe")
     r = _invoke("render", project, "--only", "v2-cau-hoi")
     assert r.exit_code != 0
     assert not (project["drive"] / "out" / "lo-mau" / "v2-cau-hoi.mp4").exists()
-    assert "siêu trắng" in r.output
+    assert "siêu xoăn" in r.output
 
 
 def test_new_job_creates_brief(project):

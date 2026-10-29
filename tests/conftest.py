@@ -14,11 +14,11 @@ if _HEADLESS.exists():
 
 
 @pytest.fixture(autouse=True)
-def _smilee_profile():
-    """Test dùng hồ sơ smilee (tokens, cam kết như pipeline cũ); test nào cần hồ sơ khác tự set_profile."""
+def _seemee_profile():
+    """Test dùng hồ sơ seemee (tokens, cam kết); test nào cần hồ sơ khác tự set_profile."""
     from vf.profile import set_profile
 
-    set_profile("smilee")
+    set_profile("seemee")
     yield
     set_profile(None)
 

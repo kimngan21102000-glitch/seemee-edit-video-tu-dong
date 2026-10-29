@@ -1,17 +1,17 @@
 {
-  "name": "edit-video-tu-dong",
+  "name": "seemee-edit-video-tu-dong",
   "owner": {
-    "name": "mnsd123"
+    "name": "kimngan21102000-glitch"
   },
   "metadata": {
-    "description": "Marketplace riêng chứa plugin edit-video-tu-dong"
+    "description": "Marketplace riêng SeeMee chứa plugin edit-video-tu-dong"
   },
   "plugins": [
     {
       "name": "edit-video-tu-dong",
       "source": "./",
-      "description": "Edit video quảng cáo TikTok tự động theo hồ sơ sản phẩm — skill /edit-video-tu-dong, video-learnings, video-style-learning.",
-      "version": "1.0.0"
+      "description": "Edit video quảng cáo TikTok tự động cho SeeMee — skill /edit-video-tu-dong, video-learnings, video-style-learning.",
+      "version": "1.1.0"
     }
   ]
 }

@@ -7,8 +7,8 @@ from vf.brief import Brief, load_brief
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "templates" / "brief.yaml"
-FORBIDDEN = ROOT / "profiles" / "smilee" / "forbidden.txt"
-PENDING = ROOT / "profiles" / "smilee" / "claims_pending.txt"
+FORBIDDEN = ROOT / "profiles" / "seemee" / "forbidden.txt"
+PENDING = ROOT / "profiles" / "seemee" / "claims_pending.txt"
 
 BASE = dict(platform="tiktok", target_seconds=30, goal="awareness", message="m", cta="c")
 
@@ -64,12 +64,12 @@ def test_pending_claims_merged(tmp_path):
 
 def test_forbidden_txt_has_product_rules():
     lines = [l.strip() for l in FORBIDDEN.read_text(encoding="utf-8").splitlines() if l.strip()]
-    for phrase in ["điều trị", "chữa", "loại bỏ vi khuẩn", "tái tạo men răng", "thay thế nha sĩ",
-                   "100% an toàn", "không bao giờ ê buốt", "thần kỳ", "đảm bảo", "cấp tốc"]:
+    for phrase in ["không bao giờ bỏng", "100% không bỏng", "không hư tóc", "phục hồi tóc", "điều trị",
+                   "giữ nếp vĩnh viễn", "thần kỳ", "đảm bảo"]:
         assert phrase in lines
 
 
 def test_product_md_keeps_confirm_markers():
-    text = (ROOT / "profiles" / "smilee" / "product.md").read_text(encoding="utf-8")
+    text = (ROOT / "profiles" / "seemee" / "product.md").read_text(encoding="utf-8")
     assert text.count("[CẦN XÁC NHẬN") >= 5
     assert "Những điều KHÔNG được nói" in text

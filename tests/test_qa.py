@@ -10,7 +10,7 @@ from vf.render import render_variant
 from vf.transcribe import Word
 
 ROOT = Path(__file__).resolve().parents[1]
-FORBIDDEN = [l for l in (ROOT / "profiles/smilee/forbidden.txt").read_text(encoding="utf-8").splitlines() if l]
+FORBIDDEN = [l for l in (ROOT / "profiles/seemee/forbidden.txt").read_text(encoding="utf-8").splitlines() if l]
 
 
 def _make(path: Path, vol_db: float, size="1080x1920", d=4):
@@ -89,19 +89,19 @@ def test_render_blocked_by_caption_claim(sample_video, tmp_path):
                        words_by_source=words, forbidden=["như sứ"])
 
 
-PENDING = [l for l in (ROOT / "profiles/smilee/claims_pending.txt").read_text(encoding="utf-8").splitlines()
+PENDING = [l for l in (ROOT / "profiles/seemee/claims_pending.txt").read_text(encoding="utf-8").splitlines()
            if l and not l.startswith("#")]
 
 
 @pytest.mark.parametrize("text", ["4,8 sao trên TikTok", "đạt 4.8 sao", "4 chấm 8 sao", "bốn chấm tám sao",
-                                  "hơn trăm  nghìn lượt bán", "sinh hoạt bình thường"])
+                                  "hơn trăm  nghìn lượt bán", "giữ nếp cả tuần luôn"])
 def test_pending_claim_spoken_forms_caught(text):
     assert check_claims([text], PENDING + FORBIDDEN) != []
 
 
-def test_result_commitments_allowed_by_user_decision():
-    # 2026-10-13 người dùng quyết định highlight 3 cam kết kết quả → không còn bị chặn
-    for text in ["trắng sau năm đến bảy ngày", "bật 3-4 tone", "trắng như sứ"]:
+def test_listing_commitments_not_blocked():
+    # cam kết có trên listing (commitments.txt) được highlight, không bị chặn
+    for text in ["chống bỏng dày gấp 2 lần", "tăng 85% độ bóng mượt", "bảo hành 12 tháng", "4 mức nhiệt 140 đến 200 độ"]:
         assert check_claims([text], PENDING + FORBIDDEN) == []
 
 
@@ -109,10 +109,10 @@ def test_range_normalization_still_works():
     assert check_claims(["sau năm đến bảy ngày"], ["5-7 ngày"]) == ["5-7 ngày"]
 
 
-@pytest.mark.parametrize("text", ["100 % an toàn", "điều-trị", "Thần\u200bkỳ"])
+@pytest.mark.parametrize("text", ["100 % không bỏng", "điều-trị", "Thần\u200bkỳ"])
 def test_forbidden_spacing_variants_caught(text):
     assert check_claims([text], FORBIDDEN) != []
 
 
 def test_plain_numbers_not_flagged():
-    assert check_claims(["15 phút mỗi lần, 7 ngày dùng đều"], PENDING + FORBIDDEN) == []
+    assert check_claims(["10 giây mỗi lọn, trục 32mm quay 65 vòng"], PENDING + FORBIDDEN) == []

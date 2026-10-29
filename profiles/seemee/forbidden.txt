@@ -1,0 +1,14 @@
+# Cụm KHÔNG được nói/ghi trên màn hình (tham khảo khi viết chữ; render không tự chặn — muốn chặn cho một lô thì ghi
+# vào `forbidden` trong jobs/<lô>/brief.yaml). Mỗi dòng một cụm, dòng # là chú thích. Lý do: product.md mục 6.
+không bao giờ bỏng
+100% không bỏng
+100% không hư tóc
+không hư tóc
+phục hồi tóc
+chữa tóc
+điều trị
+giữ nếp vĩnh viễn
+vĩnh viễn
+thần kỳ
+đảm bảo
+rẻ nhất

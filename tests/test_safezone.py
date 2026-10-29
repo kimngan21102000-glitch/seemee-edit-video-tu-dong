@@ -126,7 +126,7 @@ def test_plan_transitions_all_presets_hard_cut():
     vids = [PieceVideo(), PieceVideo(), PieceVideo(jump=True), PieceVideo()]
     t = plan_transitions(v, vids, info)
     assert t == [None] * 4
-    for pr in ("pink", "proof", "kinetic", "gift", "routine", "reply", "ugc"):
+    for pr in ("brand", "proof", "reply", "ugc"):
         assert plan_transitions(v.model_copy(update={"preset": pr}), vids, info) == [None] * 4
 
 

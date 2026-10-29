@@ -1,0 +1,17 @@
+# Cam kết được highlight + hiệu ứng TỰ ĐỘNG khi người nói nói ra trong video (tìm trong transcript).
+# Mỗi dòng: cụm cần tìm | chữ hiển thị trên màn hình | phần được tô vệt highlight (bỏ trống = cả câu)
+# So khớp không phân biệt hoa thường, bỏ dấu cũng khớp; "140 - 200", "140 đến 200" coi như "140-200".
+# Nguồn: product.md mục 2.1 (listing TikTok Shop SeeMee, 2026-10-29).
+bảo hành 12 tháng | Bảo hành 12 tháng | 12 tháng
+bảo hành 1 năm | Bảo hành 12 tháng | 12 tháng
+chống bỏng | Chống bỏng | chống bỏng
+dày gấp 2 | Chống bỏng dày gấp 2 | gấp 2
+85% | Bóng mượt hơn 85% | 85%
+gấp 1.5 | Thẻ cài tóc rộng gấp 1,5 | gấp 1,5
+4 mức nhiệt | 4 mức nhiệt | 4 mức nhiệt
+140-200 độ | 140–200°C | 140–200°C
+2 chiều | Trục xoay 2 chiều | 2 chiều
+65 vòng | 65 vòng/phút | 65 vòng
+32mm | Trục 32mm | 32mm
+32 mm | Trục 32mm | 32mm
+10 giây | Hẹn giờ 10 giây | 10 giây

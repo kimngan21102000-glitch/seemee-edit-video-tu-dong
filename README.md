@@ -1,11 +1,12 @@
-# edit-video-tu-dong — Edit video quảng cáo TikTok tự động
+# seemee-edit-video-tu-dong — Edit video quảng cáo TikTok tự động cho SeeMee
 
-Dựng hàng loạt video quảng cáo 9:16 từ video gốc (source KOL) cho **nhiều sản phẩm**: phân tích nguồn, phiên âm từng
-chữ, viết kịch bản dựng (edl) nhiều biến thể, render bằng ffmpeg + Remotion (chữ/đồ hoạ động), QA vùng an toàn TikTok,
-học từ điểm chấm. Claude Code điều khiển qua skill **`/edit-video-tu-dong`**.
+Dựng hàng loạt video quảng cáo 9:16 từ video gốc (source KOL) cho **SeeMee — máy uốn tóc xoăn lơi tự động PREMIUM 2026**:
+phân tích nguồn, phiên âm từng chữ, viết kịch bản dựng (edl) nhiều biến thể, render bằng ffmpeg + Remotion (chữ/đồ hoạ
+động), QA vùng an toàn TikTok, học từ điểm chấm. Claude Code điều khiển qua skill **`/edit-video-tu-dong`**.
 
-Tách từ pipeline Smilee (repo `game-dev`, skill `/smilee-video` v2.6, 8 lô feedback) thành bản dùng chung:
-mỗi sản phẩm là một **hồ sơ** trong `profiles/`.
+Bản riêng của SeeMee, sao chép nguyên lịch sử từ [mnsd123/edit-video-tu-dong](https://github.com/mnsd123/edit-video-tu-dong)
+(engine `vf/`, `remotion/`, `scripts/`, `skills/` và luật dựng chung `library/` giữ nguyên). Hồ sơ sản phẩm duy nhất:
+[`profiles/seemee/`](profiles/seemee/) — chỉ dùng gói đồ hoạ **chung** (không bật `nha_khoa`).
 
 | Nền tảng | Mã hoá video | Phiên âm |
 |---|---|---|
@@ -24,12 +25,10 @@ remotion/           đồ hoạ động (Remotion) — src/Graphics.tsx (chung +
 library/            CHUNG mọi sản phẩm: style-guide.md, learnings.md, tokens.base.json, brand/ (font, SFX)
 profiles/<slug>/    RIÊNG từng sản phẩm: product.md, tokens.json (màu, preset, gói đồ hoạ), commitments.txt,
                     forbidden.txt, hooks.md, learnings.md, learnings-stats.md, style-guide.md, research/
-  smilee/           kit trắng răng (chuyển nguyên từ game-dev, gói đồ hoạ nha_khoa)
-  balo/             balo thời trang — KHUNG, điền dần khi có source đầu tiên (gói đồ hoạ balo)
+  seemee/           máy uốn tóc xoăn lơi SeeMee PREMIUM 2026 (gói đồ hoạ chung; learnings.md bắt đầu trống)
   _mau/             mẫu trống để thêm sản phẩm mới
 skills/             skill Claude Code: edit-video-tu-dong, video-learnings, video-style-learning
 .claude-plugin/     plugin.json + marketplace.json (cài bằng /plugin)
-examples/           lô mẫu (smilee-lo-08: script sinh edl có luật cắt tiếng không lấn voice)
 jobs/<lô>/          brief.yaml + edl.json của từng lô (không đẩy lên GitHub)
 work/               file tạm: video chuẩn hoá, phiên âm (không đẩy lên GitHub)
 scripts/            setup-mac.sh, setup-windows.ps1, face_cover_check.py
@@ -54,32 +53,41 @@ Cần: Google Drive for desktop (bật *Available offline* cho thư mục `EDIT`
    (chọn GitHub.com → HTTPS → Login with a web browser; `gh auth setup-git` để git dùng luôn tài khoản này.)
 2. **Lấy code** vào thư mục làm việc:
    ```bash
-   gh repo clone mnsd123/edit-video-tu-dong ~/edit-video-tu-dong
+   gh repo clone kimngan21102000-glitch/seemee-edit-video-tu-dong ~/seemee-edit-video-tu-dong
    ```
 3. **Cài môi trường** (Homebrew, ffmpeg, Python 3.11, Node, .venv, Remotion, model phiên âm ~3 GB, vf.toml):
    ```bash
-   cd ~/edit-video-tu-dong && bash scripts/setup-mac.sh
+   cd ~/seemee-edit-video-tu-dong && bash scripts/setup-mac.sh
    ```
    Script tự tìm `~/Library/CloudStorage/GoogleDrive-<email>/My Drive/EDIT`; không thấy thì hỏi (kéo thư mục EDIT vào
    cửa sổ Terminal). Cuối script chạy `vf doctor`.
 4. **Cài plugin Claude Code** (gõ trong Claude Code):
    ```
-   /plugin marketplace add mnsd123/edit-video-tu-dong
-   /plugin install edit-video-tu-dong@edit-video-tu-dong
+   /plugin marketplace add kimngan21102000-glitch/seemee-edit-video-tu-dong
+   /plugin install edit-video-tu-dong@seemee-edit-video-tu-dong
    ```
-5. Mở Claude Code **ở thư mục repo** (`cd ~/edit-video-tu-dong && claude`) rồi gõ `/edit-video-tu-dong`.
+5. Mở Claude Code **ở thư mục repo** (`cd ~/seemee-edit-video-tu-dong && claude`) rồi gõ `/edit-video-tu-dong`.
 
-Cập nhật: `git pull` trong `~/edit-video-tu-dong` (code + hồ sơ) và `/plugin marketplace update edit-video-tu-dong`
+Cập nhật: `git pull` trong `~/seemee-edit-video-tu-dong` (code + hồ sơ) và `/plugin marketplace update seemee-edit-video-tu-dong`
 (skill). Các bước tự kiểm trên Mac: [docs/kiem-tra-tren-mac.md](docs/kiem-tra-tren-mac.md).
 
 ## Cài trên Windows
 
 ```powershell
-git clone https://github.com/mnsd123/edit-video-tu-dong C:\dev\edit-video-tu-dong
-cd C:\dev\edit-video-tu-dong
+git clone https://github.com/kimngan21102000-glitch/seemee-edit-video-tu-dong C:\dev\seemee-edit-video-tu-dong
+cd C:\dev\seemee-edit-video-tu-dong
 powershell -ExecutionPolicy Bypass -File scripts\setup-windows.ps1
 ```
 Plugin: như bước 4 ở trên. Repo nên ở đường dẫn ngắn (lỗi `WinError 206` khi `pip install`).
+
+## Hồ sơ SeeMee
+
+`profiles/seemee/`: `product.md` (thông tin listing TikTok Shop 2026-10-29: 3 nâng cấp PREMIUM 2026, thông số, cảnh tiền,
+điều không được nói), `commitments.txt` (bảo hành 12 tháng, chống bỏng gấp 2, +85% bóng mượt, 4 mức nhiệt 140–200°C,
+trục 32mm 2 chiều 65 vòng/phút, hẹn giờ 10 giây — tự highlight khi KOL nói), `style-guide.md`, `tokens.json`
+(`brand_label` "SEEMEE", thẻ tím dâu chữ trắng + nhấn hồng/vàng kim, preset brand · vox · proof · ugc · reply),
+`forbidden.txt`, `claims_pending.txt` (số sao/lượt bán cần ảnh chụp có ngày). Một hồ sơ duy nhất nên lệnh `vf` tự chọn
+`seemee`.
 
 ## Thêm sản phẩm mới
 
@@ -96,7 +104,7 @@ end_card, wipe, collage, callout, kinetic, nope, refill), **nha_khoa** (teeth, w
 
 ## Quy trình một lô
 
-Trong Claude Code: `/edit-video-tu-dong` (hoặc "có source mới", "edit lô mới cho balo"). Claude làm:
+Trong Claude Code: `/edit-video-tu-dong` (hoặc "có source mới", "edit lô mới cho SeeMee"). Claude làm:
 
 | Bước | Lệnh | Ghi chú |
 |---|---|---|
@@ -110,7 +118,7 @@ Trong Claude Code: `/edit-video-tu-dong` (hoặc "có source mới", "edit lô m
 
 Lệnh `vf` (Mac: `.venv/bin/vf`, Windows: `.venv\Scripts\vf.exe`): `doctor`, `profiles`, `status`, `new`, `analyze`,
 `sheet`, `snap`, `render`, `expand`, `learn`, `style`, `make-sfx`. Chọn hồ sơ cho lệnh không có lô:
-`vf --profile balo learn`.
+`vf --profile seemee learn`.
 
 ## Kiểm thử
 

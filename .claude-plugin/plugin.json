@@ -1,9 +1,9 @@
 {
   "name": "edit-video-tu-dong",
-  "version": "1.0.0",
-  "description": "Edit video quảng cáo TikTok tự động theo hồ sơ sản phẩm (Smilee, balo, …): phân tích nguồn, viết kịch bản dựng nhiều biến thể, render 9:16 bằng ffmpeg + Remotion, QA, học từ điểm chấm. Chạy tốt trên MacBook Apple Silicon (VideoToolbox + mlx-whisper) và Windows (NVENC + CUDA).",
+  "version": "1.1.0",
+  "description": "Edit video quảng cáo TikTok tự động cho SeeMee (máy uốn tóc xoăn lơi PREMIUM 2026) theo hồ sơ profiles/seemee: phân tích nguồn, viết kịch bản dựng nhiều biến thể, render 9:16 bằng ffmpeg + Remotion, QA, học từ điểm chấm. Chạy tốt trên MacBook Apple Silicon (VideoToolbox + mlx-whisper) và Windows (NVENC + CUDA).",
   "author": {
-    "name": "mnsd123"
+    "name": "kimngan21102000-glitch"
   },
-  "keywords": ["video", "tiktok", "edit", "remotion", "ffmpeg", "quang-cao"]
+  "keywords": ["video", "tiktok", "edit", "remotion", "ffmpeg", "quang-cao", "seemee"]
 }

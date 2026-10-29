@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "edit-video-tu-dong"
-version = "1.0.0"
+version = "1.1.0"
 description = "Edit video quảng cáo TikTok tự động theo hồ sơ sản phẩm (ffmpeg + Remotion + whisper)"
 requires-python = ">=3.11"
 dependencies = [

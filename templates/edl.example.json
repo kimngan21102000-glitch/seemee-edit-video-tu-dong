@@ -5,7 +5,7 @@
     {
       "id": "v1-noi-dau",
       "hook_type": "pain",
-      "preset": "pink",
+      "preset": "brand",
       "hook": {
         "source": "nguon_a.mp4",
         "start": 1.0,
@@ -27,7 +27,7 @@
       ],
       "overlays": [
         {
-          "text": "Cười mà phải che miệng?",
+          "text": "Uốn tóc toàn bị bỏng tay?",
           "start": 0.0,
           "end": 1.5,
           "position": "top",
@@ -45,14 +45,21 @@
       ],
       "graphics": [
         {
-          "kind": "light",
-          "color": "blue",
-          "label": "Đèn xanh · 10 phút",
+          "kind": "versus",
+          "steps": [
+            "bỏng tay | *chống bỏng gấp 2*"
+          ],
           "start": 2.0,
           "end": 3.0
         },
         {
-          "kind": "whiten",
+          "kind": "steps",
+          "label": "PREMIUM 2026",
+          "steps": [
+            "CHỐNG BỎNG",
+            "THẺ CÀI GẤP 1,5",
+            "BÓNG MƯỢT +85%"
+          ],
           "start": 3.0,
           "end": 4.4
         }
@@ -92,7 +99,7 @@
       ],
       "overlays": [
         {
-          "text": "15 phút tại nhà có đủ không?",
+          "text": "10 giây là xoăn thật không?",
           "start": 0.0,
           "end": 1.5,
           "position": "center",
@@ -108,7 +115,7 @@
         }
       ],
       "captions": false,
-      "rationale": "Câu hỏi về thời gian, trả lời bằng lời người nói."
+      "rationale": "Câu hỏi về tốc độ, trả lời bằng lời người nói."
     },
     {
       "id": "v3-chi-phi",
@@ -135,20 +142,20 @@
       ],
       "overlays": [
         {
-          "text": "Nha khoa ~8 triệu, tại nhà ~800k",
+          "text": "Ra tiệm vài trăm mỗi lần, tự uốn tại nhà",
           "start": 0.0,
           "end": 1.0,
           "position": "top",
           "style": "hook",
           "animation": "highlight",
           "emphasis": [
-            "~800k"
+            "tại nhà"
           ]
         }
       ],
       "effects": [],
       "captions": false,
-      "rationale": "So sánh chi phí, không dìm nha khoa."
+      "rationale": "So sánh chi phí ra tiệm, không dìm tiệm tóc, không bịa giá."
     }
   ]
 }
